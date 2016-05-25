@@ -3,10 +3,10 @@
 var express = require("express");
 var app = express();
 
-// var gulp = require("gulp");
-// require("./gulpfile");
-// 
-// gulp.start("config");
+var gulp = require("gulp");
+require("./gulpfile");
+
+gulp.start("config");
 
 app.use(express.static("app"));
 

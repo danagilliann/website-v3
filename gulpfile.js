@@ -1,14 +1,21 @@
-'use strict';
+"use strict";
 
-var gulp = require('gulp');
-var gulpNgConfig = require('gulp-ng-config');
-var server = require('gulp-server-livereload');
+var gulp = require("gulp");
+var gulpNgConfig = require("gulp-ng-config");
+var server = require("gulp-server-livereload");
 
-gulp.task('webserver', function() {
-    gulp.src('app')
+gulp.task("config", function() {
+    gulp.src("config.json")
+        .pipe(gulpNgConfig("myApp.config"))
+        .pipe(gulp.dest("."))
+});
+
+gulp.task("serve", function() {
+    gulp.src("./app")
         .pipe(server({
             livereload: true,
-            directoryListing: true,
-            open: true
+            //directoryListing: true,
+            open: true,
+            defaultFile: "index.html"
         }));
 })
