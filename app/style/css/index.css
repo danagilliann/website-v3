@@ -1,0 +1,7 @@
+@import url("/style/fonts/franklin/franklin.css");
+
+h1 {
+    font-family: 'franklin', sans-serif;
+    text-align: center;
+}
+
