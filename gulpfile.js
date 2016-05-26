@@ -7,15 +7,14 @@ var server = require("gulp-server-livereload");
 gulp.task("config", function() {
     gulp.src("config.json")
         .pipe(gulpNgConfig("myApp.config"))
-        .pipe(gulp.dest("."))
+        .pipe(gulp.dest("."));
 });
 
 gulp.task("serve", function() {
     gulp.src("./app")
         .pipe(server({
             livereload: true,
-            //directoryListing: true,
             open: true,
             defaultFile: "index.html"
         }));
-})
+});
