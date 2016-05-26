@@ -6,7 +6,24 @@
     </head>
 
     <body ng-app="myApp" ng-controller="indexCtrl">
-        <h1>color_behanced</h1>
+        <div class="main">
+            <h1 class="title">color_behanced</h1>
+            <p class="desc">
+                Enter a RGB value.
+                Ex: <span style="border-bottom: thick solid
+                        #06f9d4;">#06f9d4</span>
+                or <span style="border-bottom: thick solid
+                        #ff0000;">#ff0000</span>
+                or <span style="border-bottom: thick solid
+                        #ffff66;">#ffff66</span>
+            </p>
+            <form>
+                <input type="text" name="color" value="Enter a color">
+            </form>
+        </div>
+        <footer>
+            <p>Made with aesthetics by <a href="http://danagilliann.me">Dana Lee</a></p>
+        </footer>
     </body>
     
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>

@@ -1,0 +1,18 @@
+@import url("/style/fonts/franklin/franklin.css");
+@import url(https://fonts.googleapis.com/css?family=Lekton);
+
+h1 {
+    font: 3em 'franklin', sans-serif;
+    margin: 0 auto;
+}
+
+p {
+    font: 16px "Lekton", monospace;
+    line-height: 28px;
+}
+
+a {
+    color: black;
+    border-bottom: thin dotted #000000;
+    text-decoration: none;
+}
