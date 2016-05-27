@@ -33,8 +33,18 @@ input {
     text-align: center;
 
     padding: 1em;
-    
+    margin-bottom: 0.5em;
     width: 300px;
+
+    border-width: thin;
+    border-color: black
+}
+
+input[type="submit" i] {
+    font: 16px "Lekton", monospace;
+    background-color: black;
+    color: white;
+    width: 170px;
 }
 
 footer {

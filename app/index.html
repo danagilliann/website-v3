@@ -9,16 +9,17 @@
         <div class="main">
             <h1 class="title">color_behanced</h1>
             <p class="desc">
-                Enter a RGB value.
+                Enter a RGB value without the #.
                 Ex: <span style="border-bottom: thick solid
-                        #06f9d4;">#06f9d4</span>
+                        #06f9d4;">06f9d4</span>
                 or <span style="border-bottom: thick solid
-                        #ff0000;">#ff0000</span>
+                        #ff0000;">ff0000</span>
                 or <span style="border-bottom: thick solid
-                        #ffff66;">#ffff66</span>
+                        #ffff66;">ffff66</span>
             </p>
-            <form>
-                <input type="text" name="color" value="Enter a color">
+            <form ng-submit="submit()">
+                <input type="text" name="color" value="Enter a color" ng-model="color">
+                <input type="submit" value="Submit">
             </form>
         </div>
         <footer>
