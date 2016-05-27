@@ -5,12 +5,11 @@
 
     app.controller("indexCtrl", function($scope, api_key, $http) {
         $scope.api_key = api_key;
-        $scope.color = "";
+        $scope.color = "Enter a color";
 
         $scope.submit = function() {
-            console.log("poo");
-            :wa
-        }
+            console.log(true);
+        };
     });
 
 })();

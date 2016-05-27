@@ -6,7 +6,7 @@
     </head>
 
     <body ng-app="myApp" ng-controller="indexCtrl">
-        <div class="main">
+        <div class="main" ng-hide="clickSubmit">
             <h1 class="title">color_behanced</h1>
             <p class="desc">
                 Enter a RGB value without the #.
@@ -18,8 +18,8 @@
                         #ffff66;">ffff66</span>
             </p>
             <form ng-submit="submit()">
-                <input type="text" name="color" value="Enter a color" ng-model="color">
-                <input type="submit" value="Submit">
+                <input type="text" name="color" ng-model="color">
+                <input type="submit" value="Submit" ng-click="clickSubmit = true">
             </form>
         </div>
         <footer>
