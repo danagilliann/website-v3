@@ -6,7 +6,7 @@
     </head>
 
     <body ng-app="myApp" ng-controller="indexCtrl">
-        <div class="main" ng-hide="clickSubmit">
+        <div ng-hide="clickSubmit" class="main">
             <h1 class="title">color_behanced</h1>
             <p class="desc">
                 Enter a RGB value without the #.
@@ -28,6 +28,7 @@
     </body>
     
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
     <script src="./js/config.js"></script>
     <script src="./js/controllers/index-ctrl.js"></script>
 

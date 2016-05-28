@@ -22,6 +22,15 @@ div.main {
     margin: auto;
 }
 
+.ng-hide-add, .ng-hide-remove {
+    transition: all ease 0.2s;
+}
+
+.ng-hide {
+    line-height: 0;
+    opacity: 0;
+}
+
 form {
     text-align: center;
 
@@ -52,3 +61,4 @@ footer {
     bottom: 2%;
     right: 2%;
 }
+

@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    var app = angular.module("myApp", ["myApp.config"]);
+    var app = angular.module("myApp", ["myApp.config", "ngAnimate"]);
 
     app.controller("indexCtrl", function($scope, api_key, $http) {
         $scope.api_key = api_key;
