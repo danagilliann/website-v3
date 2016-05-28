@@ -16,3 +16,12 @@ a {
     border-bottom: thin dotted #000000;
     text-decoration: none;
 }
+
+.ng-hide-add, .ng-hide-remove {
+    transition: all ease 0.2s;
+}
+
+.ng-hide {
+    line-height: 0;
+    opacity: 0;
+}
