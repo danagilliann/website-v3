@@ -26,6 +26,12 @@ div.result {
     text-align: center;
 }
 
+img {
+    width: 320px;
+    height: 100%;
+    padding: 1.5em;
+}
+
 form {
     text-align: center;
 
@@ -52,7 +58,7 @@ input[type="submit" i] {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 2%;
     right: 2%;
 }

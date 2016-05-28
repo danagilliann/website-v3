@@ -23,7 +23,7 @@
             </form>
         </div>
         <div ng-show="clickSubmit" class="result">
-            poo
+            <img ng-repeat="picture in pictures" src="{{ picture.covers.original }}">
         </div>
         <footer>
             <p>Made with aesthetics by <a href="http://danagilliann.me">Dana Lee</a></p>

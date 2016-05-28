@@ -11,9 +11,9 @@
             
             $http.jsonp(url)
                 .then(function success(res) {
-                    console.log(res);
+                    $scope.pictures = res.data.projects;
                 }, function err(res) {
-                    console.log(url);
+                    clickSubmit = false;
             });
         };
     });
