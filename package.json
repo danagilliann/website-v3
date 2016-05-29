@@ -9,6 +9,7 @@
   "author": "Dana Lee",
   "license": "ISC",
   "dependencies": {
+    "angular-spinner": "^0.8.1",
     "express": "^4.13.4",
     "gulp": "^3.9.1",
     "gulp-ng-config": "^1.3.1",

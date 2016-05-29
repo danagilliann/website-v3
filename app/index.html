@@ -23,7 +23,22 @@
             </form>
         </div>
         <div ng-show="clickSubmit" class="result">
-            <img ng-repeat="picture in pictures" src="{{ picture.covers.original }}">
+            <div class="header-result">
+                <div class="title-result">
+                    <h1 class="result">color_behanced</h1>
+                </div>
+                <div class="form-result">
+                    <form class="result" ng-submit="submit()">
+                        <input type="text" name="color" ng-model="color" class="result">
+                        <input type="submit" value="Submit" ng-click="clickSubmit = true" class="result">
+                    </form>
+                </div>
+            </div>
+            <div class="images">
+                <div ng-repeat="picture in pictures" class="image">
+                    <img class="images" src="{{ picture.covers.original }}">
+                </div>
+            </div>
         </div>
         <footer>
             <p>Made with aesthetics by <a href="http://danagilliann.me">Dana Lee</a></p>
@@ -32,6 +47,8 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+    <script src="http://spin.js.org/spin.min.js"></script>
+    <!--script src="node_modules/angular-spinner/angular-spinner.js"></script-->
     <script src="./js/config.js"></script>
     <script src="./js/controllers/index-ctrl.js"></script>
 

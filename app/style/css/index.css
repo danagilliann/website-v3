@@ -5,6 +5,11 @@ h1.title {
     text-align: center;
 }
 
+h1.result {
+    text-align: center;
+    display: inline;
+}
+
 p {
     text-align: center;
 }
@@ -26,6 +31,27 @@ div.result {
     text-align: center;
 }
 
+div.header-result {
+    position: fixed;
+    margin-top: 0.5em;
+}
+
+div.title-result {
+    display: inline;
+}
+
+div.form-result {
+    display: inline;
+}
+
+div.images {
+    padding-top: 7em;
+}
+
+div.image {
+    display: inline;
+}
+
 img {
     width: 320px;
     height: 100%;
@@ -34,8 +60,14 @@ img {
 
 form {
     text-align: center;
-
+    
     padding-top: 2em;
+}
+
+form.result {
+    display: inline;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 input {
@@ -50,11 +82,26 @@ input {
     border-color: black
 }
 
+input.result {
+    border-width: medium;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+
+    background-color: transparent;
+
+    width: 170px;
+}
+
 input[type="submit" i] {
     font: 16px "Lekton", monospace;
     background-color: black;
     color: white;
     width: 170px;
+}
+
+input[type="submit" i] {
+    width: 100px;
 }
 
 footer {
