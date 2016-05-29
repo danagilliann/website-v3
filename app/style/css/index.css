@@ -55,7 +55,7 @@ div.image {
 img {
     width: 320px;
     padding: 1.5em;
-    
+    vertical-align: middle;
     transition: all ease 0.2s;
 }
 
