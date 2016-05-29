@@ -10,7 +10,7 @@ Setup a `config.json` with your key and `api_key` as your key and your generated
 ```json
 // config.json
 {
-    api_key: your_key_here
+    "api_key": "your_key_here"
 }
 ```
 Enter the following on the command line:
