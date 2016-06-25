@@ -5,51 +5,15 @@
         <link rel="stylesheet" href="./style/css/index.css" text="text/css"/>
     </head>
 
-    <body ng-app="myApp" ng-controller="indexCtrl">
-        <div ng-hide="clickSubmit" class="main">
-            <a href="/"><h1 class="title">color_behanced</h1></a>
-            <p class="desc">
-                Enter a RGB value without the #.
-                Ex: <span style="border-bottom: thick solid
-                        #06f9d4;">06f9d4</span>
-                or <span style="border-bottom: thick solid
-                        #ff0000;">ff0000</span>
-                or <span style="border-bottom: thick solid
-                        #ffff66;">ffff66</span>
-            </p>
-            <form ng-submit="submit()">
-                <input type="text" name="color" ng-model="color">
-                <input type="submit" value="Submit" ng-click="clickSubmit = true">
-            </form>
-        </div>
-        <div ng-show="clickSubmit" class="result">
-            <div class="header-result">
-                <div class="title-result">
-                    <a href="/"><h1 class="result">color_behanced</h1></a>
-                </div>
-                <div class="form-result">
-                    <form class="result" ng-submit="submit()">
-                        <input type="text" name="color" ng-model="color" class="result">
-                        <input type="submit" value="Submit" ng-click="clickSubmit = true" class="result">
-                    </form>
-                </div>
-            </div>
-            <div class="images">
-                <div ng-repeat="picture in pictures" class="image">
-                    <img class="images" ng-src="{{ picture.covers.original }}">
-                </div>
-            </div>
-        </div>
-        <footer>
-            <p>Made with aesthetics by <a href="http://danagilliann.me">Dana Lee</a></p>
-        </footer>
+    <!--body ng-app="myApp" ng-controller="indexCtrl"-->
+    <body>
+      <div class="heading">
+        <h1>Dana Lee</h1>
+      </div>
+      <img class="heading-img" src="./img/cover.jpg">
     </body>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
-    <script src="http://spin.js.org/spin.min.js"></script>
-    <!--script src="node_modules/angular-spinner/angular-spinner.js"></script-->
-    <script src="./js/config.js"></script>
-    <script src="./js/controllers/index-ctrl.js"></script>
+
+    <!--script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script-->
 
 </html>

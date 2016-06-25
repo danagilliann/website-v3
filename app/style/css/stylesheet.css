@@ -1,26 +1,13 @@
 @import url("/style/fonts/franklin/franklin.css");
 @import url(https://fonts.googleapis.com/css?family=Lekton);
-
 h1 {
-    font: 3em 'franklin', sans-serif;
-    margin: 0 auto;
-}
+  font: 3em 'franklin', sans-serif;
+  margin: 0 auto; }
 
 p {
-    font: 16px "Lekton", monospace;
-    line-height: 28px;
-}
+  font: 16px "Lekton", monospace;
+  line-height: 28px; }
 
 a {
-    color: black;
-    text-decoration: none;
-}
-
-.ng-hide-add, .ng-hide-remove {
-    transition: all ease 0.2s;
-}
-
-.ng-hide {
-    line-height: 0;
-    opacity: 0;
-}
+  color: black;
+  text-decoration: none; }
