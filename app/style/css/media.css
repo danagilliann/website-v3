@@ -1,0 +1,5 @@
+@media (min-width: 992px) {
+  div.heading {
+    margin: auto; }
+  img.header-img {
+    margin-left: 0; } }

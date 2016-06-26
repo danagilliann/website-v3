@@ -1,17 +1,58 @@
-@import url("/style/css/stylesheet.css")
+@import url("/style/fonts/franklin/franklin.css")
+@import url(https://fonts.googleapis.com/css?family=Lekton)
+
+$red: rgb(255, 117, 141)
+$orange: rgb(254, 186, 132)
+$yellow: rgb(255, 246, 177)
+$green: rgb(163, 229, 152)
+$blue: rgb(160, 247, 255)
+// $indigo: rgb(33, 119, 255)
+$violet: rgb(193, 146, 255)
+
+@mixin rainbow()
+  // border-image: rgb(255, 117, 141)
+  // border-image: -webkit-linear-gradient(left, $red, $orange, $yellow, $green, $blue, $indigo, $violet)
+  // border-image: -o-linear-gradient(left, $red, $orange, $yellow, $green, $blue, $indigo, $violet)
+  // border-image: -moz-linear-gradient(left, $red, $orange, $yellow, $green, $blue, $indigo, $violet)
+  border-image: radial-gradient(farthest-corner at 0px 0px , rgb(255, 51, 204) 0%, rgb(254, 186, 132) 76%, rgb(255, 235, 79) 80%, rgb(163, 229, 152) 85%, rgb(160, 247, 255) 90%, rgb(200, 127, 255) 98%) 1%
+  border-width: 0 0 3px 0
+
+.rainbow
+  @include rainbow
+
+p, li
+  font: 16px "Lekton", monospace
+  line-height: 28px
+
+p
+  text-align: center
+
+.section-title
+  @include rainbow
+  border-width: 0 0 3px 0
+
+  display: inline-block
+  margin-right: 40px
+
+a
+  color: black
+  text-decoration: none
 
 h1
+  font: 80px 'franklin', sans-serif
+  margin: 0 auto
+
   &.title
     text-align: center
   &.result
     text-align: center
     display: inline
 
-p
-  text-align: center
-
 div
   &.heading
+    margin: 95px auto auto
+    text-align: center
+  &.header
     display: inline-block
   &.images
     padding-top: 7em
@@ -23,8 +64,10 @@ img
   padding: 1.5em
   vertical-align: middle
   transition: all ease 0.2s
+
   &.heading-img
     display: inline-block
+    padding: 0 100px
 
 form
   text-align: center
@@ -56,3 +99,15 @@ footer
   right: 2%
   a
     border-bottom: thin dotted #000000
+
+$breakpoint-tablet: 771px
+$breakpoint-small-desktop: 992px
+
+// Media Queries
+@media (max-width: $breakpoint-tablet)
+  div
+    &.heading
+      margin: auto
+
+  img.heading-img
+      padding: 0

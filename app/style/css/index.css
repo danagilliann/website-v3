@@ -1,15 +1,41 @@
-@import url("/style/css/stylesheet.css");
-h1.title {
-  text-align: center; }
+@import url("/style/fonts/franklin/franklin.css");
+@import url(https://fonts.googleapis.com/css?family=Lekton);
+.rainbow {
+  border-image: radial-gradient(farthest-corner at 0px 0px, #ff33cc 0%, #feba84 76%, #ffeb4f 80%, #a3e598 85%, #a0f7ff 90%, #c87fff 98%) 1%;
+  border-width: 0 0 3px 0; }
 
-h1.result {
-  text-align: center;
-  display: inline; }
+p, li {
+  font: 16px "Lekton", monospace;
+  line-height: 28px; }
 
 p {
   text-align: center; }
 
+.section-title {
+  border-image: radial-gradient(farthest-corner at 0px 0px, #ff33cc 0%, #feba84 76%, #ffeb4f 80%, #a3e598 85%, #a0f7ff 90%, #c87fff 98%) 1%;
+  border-width: 0 0 3px 0;
+  border-width: 0 0 3px 0;
+  display: inline-block;
+  margin-right: 40px; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+h1 {
+  font: 80px 'franklin', sans-serif;
+  margin: 0 auto; }
+  h1.title {
+    text-align: center; }
+  h1.result {
+    text-align: center;
+    display: inline; }
+
 div.heading {
+  margin: 95px auto auto;
+  text-align: center; }
+
+div.header {
   display: inline-block; }
 
 div.images {
@@ -24,7 +50,8 @@ img {
   vertical-align: middle;
   transition: all ease 0.2s; }
   img.heading-img {
-    display: inline-block; }
+    display: inline-block;
+    padding: 0 100px; }
 
 form {
   text-align: center;
@@ -56,3 +83,9 @@ footer {
   right: 2%; }
   footer a {
     border-bottom: thin dotted #000000; }
+
+@media (max-width: 771px) {
+  div.heading {
+    margin: auto; }
+  img.heading-img {
+    padding: 0; } }
