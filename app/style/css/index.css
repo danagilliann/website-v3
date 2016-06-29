@@ -1,14 +1,52 @@
 @import url("/style/fonts/franklin/franklin.css");
-@import url(https://fonts.googleapis.com/css?family=Lekton);
+@import 'https://fonts.googleapis.com/css?family=Kaushan+Script|Work+Sans';
 .rainbow {
   border-image: radial-gradient(farthest-corner at 0px 0px, #ff33cc 0%, #feba84 76%, #ffeb4f 80%, #a3e598 85%, #a0f7ff 90%, #c87fff 98%) 1%;
   border-width: 0 0 3px 0; }
 
-p, li {
-  font: 16px "Lekton", monospace;
+.ul {
+  -webkit-padding-start: 0px; }
+
+.nav, .about__description {
+  font: 16px "Lekton", sans-serif;
   line-height: 28px; }
 
+.nav-bar {
+  -webkit-padding-start: 0px; }
+
+.nav {
+  list-style: none;
+  display: inline-block;
+  margin-right: 20px;
+  margin-left: 20px;
+  position: relative; }
+
+.nav:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #f7538d;
+  content: "";
+  transition: width 0.2s; }
+
+.underline-pink:after {
+  background-color: #f7538d; }
+
+.underline-blue:after {
+  background-color: #51ebdf; }
+
+.underline-green:after {
+  background-color: #348c45; }
+
+.nav:hover:after {
+  width: 100%; }
+
 p {
+  text-align: center; }
+
+.about__title {
   text-align: center; }
 
 .section-title {
@@ -22,60 +60,29 @@ a {
   color: black;
   text-decoration: none; }
 
-h1 {
-  font: 80px 'franklin', sans-serif;
-  margin: 0 auto; }
-  h1.title {
-    text-align: center; }
-  h1.result {
-    text-align: center;
-    display: inline; }
-
-div.heading {
-  margin: 95px auto auto;
+.title {
+  font: 80px "Kaushan Script", sans-serif;
+  margin: 0 auto;
   text-align: center; }
 
-div.header {
+.div {
+  margin-top: 120px; }
+
+.heading {
+  text-align: center; }
+
+.header {
   display: inline-block; }
 
-div.images {
-  padding-top: 7em; }
-
-div.image {
-  display: inline; }
-
-img {
+.heading-img {
   width: 320px;
   padding: 1.5em;
   vertical-align: middle;
   transition: all ease 0.2s; }
-  img.heading-img {
-    display: inline-block;
-    padding: 0 100px; }
 
-form {
-  text-align: center;
-  padding-top: 2em; }
-  form.result {
-    display: inline;
-    padding-left: 1em;
-    padding-right: 1em; }
-
-input {
-  font: 16px "Lekton", monospace;
-  text-align: center;
-  padding: 1em;
-  margin-bottom: 0.5em;
-  width: 300px;
-  border-width: thin;
-  border-color: black; }
-  input.result {
-    border-width: medium;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    background-color: transparent;
-    width: 170px; }
+.heading-img {
+  display: inline-block;
+  padding: 0 100px; }
 
 footer {
   position: fixed;
@@ -85,7 +92,7 @@ footer {
     border-bottom: thin dotted #000000; }
 
 @media (max-width: 771px) {
-  div.heading {
+  .heading {
     margin: auto; }
-  img.heading-img {
+  .heading-img {
     padding: 0; } }

@@ -1,13 +1,17 @@
 @import url("/style/fonts/franklin/franklin.css")
-@import url(https://fonts.googleapis.com/css?family=Lekton)
+@import 'https://fonts.googleapis.com/css?family=Kaushan+Script|Work+Sans'
 
-$red: rgb(255, 117, 141)
-$orange: rgb(254, 186, 132)
-$yellow: rgb(255, 246, 177)
-$green: rgb(163, 229, 152)
-$blue: rgb(160, 247, 255)
-// $indigo: rgb(33, 119, 255)
-$violet: rgb(193, 146, 255)
+$font__standard: 16px "Lekton", sans-serif
+$font__header: 80px 'Kaushan Script', sans-serif
+
+// $red: rgb(255, 117, 141)
+// $orange: rgb(254, 186, 132)
+// $yellow: rgb(255, 246, 177)
+// $violet: rgb(193, 146, 255)
+
+$pink: rgb(247, 83, 141)
+$green: rgb(52, 140, 69)
+$blue: rgb(81, 235, 223)
 
 @mixin rainbow()
   // border-image: rgb(255, 117, 141)
@@ -20,11 +24,52 @@ $violet: rgb(193, 146, 255)
 .rainbow
   @include rainbow
 
-p, li
-  font: 16px "Lekton", monospace
+// ul
+.ul
+  -webkit-padding-start: 0px
+
+// p, li
+.nav, .about__description
+  font: $font__standard
   line-height: 28px
 
+.nav-bar
+  -webkit-padding-start: 0px
+
+.nav
+  list-style: none
+  display: inline-block
+  margin-right: 20px
+  margin-left: 20px
+  position: relative
+
+.nav:after
+  position: absolute
+  left: 0
+  bottom: 0
+  width: 0
+  height: 3px
+  background-color: $pink
+  content: ""
+  transition: width 0.2s
+
+.underline-pink:after
+  background-color: $pink
+
+.underline-blue:after
+  background-color: $blue
+
+.underline-green:after
+  background-color: $green
+
+.nav:hover:after
+  width: 100%
+
+// p
 p
+  text-align: center
+
+.about__title
   text-align: center
 
 .section-title
@@ -34,69 +79,46 @@ p
   display: inline-block
   margin-right: 40px
 
+// a
 a
   color: black
   text-decoration: none
 
-h1
-  font: 80px 'franklin', sans-serif
+// h1
+.title
+  font: $font__header
   margin: 0 auto
+  text-align: center
 
-  &.title
-    text-align: center
-  &.result
-    text-align: center
-    display: inline
+// div
+.div
+  margin-top: 120px
 
-div
-  &.heading
-    margin: 95px auto auto
-    text-align: center
-  &.header
-    display: inline-block
-  &.images
-    padding-top: 7em
-  &.image
-    display: inline
+.heading
+  // margin: 95px auto auto
+  text-align: center
 
-img
+.header
+  display: inline-block
+
+// img
+.heading-img
   width: 320px
   padding: 1.5em
   vertical-align: middle
   transition: all ease 0.2s
 
-  &.heading-img
-    display: inline-block
-    padding: 0 100px
+.heading-img
+  display: inline-block
+  padding: 0 100px
 
-form
-  text-align: center
-  padding-top: 2em
-  &.result
-    display: inline
-    padding-left: 1em
-    padding-right: 1em
-
-input
-  font: 16px "Lekton", monospace
-  text-align: center
-  padding: 1em
-  margin-bottom: 0.5em
-  width: 300px
-  border-width: thin
-  border-color: black
-  &.result
-    border-width: medium
-    border-left: none
-    border-right: none
-    border-top: none
-    background-color: transparent
-    width: 170px
-
+// footer
 footer
   position: fixed
   bottom: 2%
   right: 2%
+
+  // footer.a
   a
     border-bottom: thin dotted #000000
 
@@ -105,9 +127,9 @@ $breakpoint-small-desktop: 992px
 
 // Media Queries
 @media (max-width: $breakpoint-tablet)
-  div
-    &.heading
-      margin: auto
 
-  img.heading-img
-      padding: 0
+  .heading
+    margin: auto
+
+  .heading-img
+    padding: 0
