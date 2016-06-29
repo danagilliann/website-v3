@@ -56,9 +56,30 @@ p {
   display: inline-block;
   margin-right: 40px; }
 
+.about__description {
+  padding: 0 240px;
+  margin-top: 50px; }
+
 a {
   color: black;
   text-decoration: none; }
+
+.a__pink {
+  color: #f7538d;
+  position: relative; }
+
+.a__pink:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #f7538d;
+  content: "";
+  transition: width 0.2s; }
+
+.a__pink:hover:after {
+  width: 100%; }
 
 .title {
   font: 80px "Kaushan Script", sans-serif;
@@ -66,9 +87,10 @@ a {
   text-align: center; }
 
 .div {
-  margin-top: 120px; }
+  margin: 200px 0; }
 
 .heading {
+  margin: 95px auto auto;
   text-align: center; }
 
 .header {

@@ -13,16 +13,26 @@ $pink: rgb(247, 83, 141)
 $green: rgb(52, 140, 69)
 $blue: rgb(81, 235, 223)
 
-@mixin rainbow()
-  // border-image: rgb(255, 117, 141)
-  // border-image: -webkit-linear-gradient(left, $red, $orange, $yellow, $green, $blue, $indigo, $violet)
-  // border-image: -o-linear-gradient(left, $red, $orange, $yellow, $green, $blue, $indigo, $violet)
-  // border-image: -moz-linear-gradient(left, $red, $orange, $yellow, $green, $blue, $indigo, $violet)
-  border-image: radial-gradient(farthest-corner at 0px 0px , rgb(255, 51, 204) 0%, rgb(254, 186, 132) 76%, rgb(255, 235, 79) 80%, rgb(163, 229, 152) 85%, rgb(160, 247, 255) 90%, rgb(200, 127, 255) 98%) 1%
-  border-width: 0 0 3px 0
+@mixin horizontal-underline($element, $color, $height)
 
-.rainbow
-  @include rainbow
+  $element
+    position: relative
+
+  $element:after
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 0
+    height: $height
+    background-color: $color
+    content: ""
+    transition: width 0.2s
+
+  $element:hover:after
+    width: 100%
+
+@include horizontal-underline(.nav, 3px, $pink)
+@include horizontal-underline(.a__pink, 1px, $pink)
 
 // ul
 .ul
@@ -41,17 +51,6 @@ $blue: rgb(81, 235, 223)
   display: inline-block
   margin-right: 20px
   margin-left: 20px
-  position: relative
-
-.nav:after
-  position: absolute
-  left: 0
-  bottom: 0
-  width: 0
-  height: 3px
-  background-color: $pink
-  content: ""
-  transition: width 0.2s
 
 .underline-pink:after
   background-color: $pink
@@ -62,10 +61,6 @@ $blue: rgb(81, 235, 223)
 .underline-green:after
   background-color: $green
 
-.nav:hover:after
-  width: 100%
-
-// p
 p
   text-align: center
 
@@ -79,10 +74,25 @@ p
   display: inline-block
   margin-right: 40px
 
+.about__description
+  padding: 0 240px
+  margin-top: 50px
+
 // a
 a
   color: black
   text-decoration: none
+
+.a__pink
+  color: $pink
+
+  @include horizontal-underline
+
+.a__pink:after
+  @include horizontal-underline-hover($pink, 1px)
+
+.a__pink:hover:after
+  @include horizontal-underline-after
 
 // h1
 .title
@@ -92,10 +102,10 @@ a
 
 // div
 .div
-  margin-top: 120px
+  margin: 200px 0
 
 .heading
-  // margin: 95px auto auto
+  margin: 95px auto auto
   text-align: center
 
 .header
