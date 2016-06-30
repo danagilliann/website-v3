@@ -36,11 +36,18 @@ $blue: rgb(81, 235, 223)
   font: $font__standard
   line-height: 28px
 
+// li
+.project
+  margin-top: 100px
+
+// p
 .about__link
   margin: 0 10px
 
-.nav, .about__link
+.nav, .about__link, .project
   list-style: none
+
+.nav, .about__link
   display: inline-block
 
 .nav
@@ -103,6 +110,10 @@ a
   font: $font__header
   margin: 0 auto
   text-align: center
+  line-height: 80px
+
+.project__info
+  font-weight: normal
 
 // div
 .div
@@ -115,8 +126,14 @@ a
 .header
   display: inline-block
 
-.project__title, .project__desc
-  display: inline
+.project__title, .project__desc, .project__info
+  display: inline-block
+
+.project__title
+  padding: 70px 120px
+  border: 3px solid $green
+  margin-left: -140px
+  margin-right: 50px
 
 // img
 .heading-img
@@ -139,17 +156,31 @@ footer
   a
     border-bottom: thin dotted #000000
 
-$breakpoint-tablet: 771px
+$breakpoint-tablet: 768px
 $breakpoint-small-desktop: 992px
 
-// Media Queries
 @media (max-width: $breakpoint-tablet)
 
-  .heading
-    margin: auto
+  .title
+    font-size: 60px
+    line-height: 64px
 
-  .heading-img
-    padding: 0
+  .heading
+    margin: 40px auto auto
+
+    .heading-img
+      padding: 0
+      width: 300px
 
   .about__description
     padding: 0 10px
+
+  .project__title, .project__desc, .project__info
+    display: block
+
+  .project__title
+    margin: auto
+    padding: 60px
+
+  .project__desc
+    margin-top: 30px

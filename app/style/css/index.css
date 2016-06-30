@@ -10,11 +10,16 @@
   font: 16px "Lekton", sans-serif;
   line-height: 28px; }
 
+.project {
+  margin-top: 100px; }
+
 .about__link {
   margin: 0 10px; }
 
+.nav, .about__link, .project {
+  list-style: none; }
+
 .nav, .about__link {
-  list-style: none;
   display: inline-block; }
 
 .nav {
@@ -83,7 +88,11 @@ a {
 .title {
   font: 80px "Kaushan Script", sans-serif;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  line-height: 80px; }
+
+.project__info {
+  font-weight: normal; }
 
 .div {
   margin: 200px 0; }
@@ -95,8 +104,14 @@ a {
 .header {
   display: inline-block; }
 
-.project__title, .project__desc {
-  display: inline; }
+.project__title, .project__desc, .project__info {
+  display: inline-block; }
+
+.project__title {
+  padding: 70px 120px;
+  border: 3px solid #348c45;
+  margin-left: -140px;
+  margin-right: 50px; }
 
 .heading-img {
   width: 320px;
@@ -115,10 +130,21 @@ footer {
   footer a {
     border-bottom: thin dotted #000000; }
 
-@media (max-width: 771px) {
+@media (max-width: 768px) {
+  .title {
+    font-size: 60px;
+    line-height: 64px; }
   .heading {
-    margin: auto; }
-  .heading-img {
-    padding: 0; }
+    margin: 40px auto auto; }
+    .heading .heading-img {
+      padding: 0;
+      width: 300px; }
   .about__description {
-    padding: 0 10px; } }
+    padding: 0 10px; }
+  .project__title, .project__desc, .project__info {
+    display: block; }
+  .project__title {
+    margin: auto;
+    padding: 60px; }
+  .project__desc {
+    margin-top: 30px; } }
