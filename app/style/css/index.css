@@ -1,22 +1,23 @@
 @import url("/style/fonts/franklin/franklin.css");
 @import 'https://fonts.googleapis.com/css?family=Kaushan+Script|Work+Sans';
-.rainbow {
-  border-image: radial-gradient(farthest-corner at 0px 0px, #ff33cc 0%, #feba84 76%, #ffeb4f 80%, #a3e598 85%, #a0f7ff 90%, #c87fff 98%) 1%;
-  border-width: 0 0 3px 0; }
-
 .ul {
   -webkit-padding-start: 0px; }
 
-.nav, .about__description {
+.about__links, .projects {
+  text-align: center; }
+
+.li, .nav, .about__description {
   font: 16px "Lekton", sans-serif;
   line-height: 28px; }
 
-.nav-bar {
-  -webkit-padding-start: 0px; }
+.about__link {
+  margin: 0 10px; }
+
+.nav, .about__link {
+  list-style: none;
+  display: inline-block; }
 
 .nav {
-  list-style: none;
-  display: inline-block;
   margin-right: 20px;
   margin-left: 20px;
   position: relative; }
@@ -31,6 +32,9 @@
   content: "";
   transition: width 0.2s; }
 
+.nav:hover:after {
+  width: 100%; }
+
 .underline-pink:after {
   background-color: #f7538d; }
 
@@ -40,9 +44,6 @@
 .underline-green:after {
   background-color: #348c45; }
 
-.nav:hover:after {
-  width: 100%; }
-
 p {
   text-align: center; }
 
@@ -50,8 +51,6 @@ p {
   text-align: center; }
 
 .section-title {
-  border-image: radial-gradient(farthest-corner at 0px 0px, #ff33cc 0%, #feba84 76%, #ffeb4f 80%, #a3e598 85%, #a0f7ff 90%, #c87fff 98%) 1%;
-  border-width: 0 0 3px 0;
   border-width: 0 0 3px 0;
   display: inline-block;
   margin-right: 40px; }
@@ -96,6 +95,9 @@ a {
 .header {
   display: inline-block; }
 
+.project__title, .project__desc {
+  display: inline; }
+
 .heading-img {
   width: 320px;
   padding: 1.5em;
@@ -117,4 +119,6 @@ footer {
   .heading {
     margin: auto; }
   .heading-img {
-    padding: 0; } }
+    padding: 0; }
+  .about__description {
+    padding: 0 10px; } }

@@ -4,53 +4,58 @@
 $font__standard: 16px "Lekton", sans-serif
 $font__header: 80px 'Kaushan Script', sans-serif
 
-// $red: rgb(255, 117, 141)
-// $orange: rgb(254, 186, 132)
-// $yellow: rgb(255, 246, 177)
-// $violet: rgb(193, 146, 255)
-
 $pink: rgb(247, 83, 141)
 $green: rgb(52, 140, 69)
 $blue: rgb(81, 235, 223)
 
-@mixin horizontal-underline($element, $color, $height)
+@mixin horizontal-underline-element()
+  position: relative
 
-  $element
-    position: relative
+@mixin horizontal-underline-after($color, $height)
+  position: absolute
+  left: 0
+  bottom: 0
+  width: 0
+  height: $height
+  background-color: $color
+  content: ""
+  transition: width 0.2s
 
-  $element:after
-    position: absolute
-    left: 0
-    bottom: 0
-    width: 0
-    height: $height
-    background-color: $color
-    content: ""
-    transition: width 0.2s
-
-  $element:hover:after
-    width: 100%
-
-@include horizontal-underline(.nav, 3px, $pink)
-@include horizontal-underline(.a__pink, 1px, $pink)
+@mixin horizontal-underline-after-hover()
+  width: 100%
 
 // ul
 .ul
   -webkit-padding-start: 0px
 
+.about__links, .projects
+  text-align: center
+
 // p, li
-.nav, .about__description
+.li, .nav, .about__description
   font: $font__standard
   line-height: 28px
 
-.nav-bar
-  -webkit-padding-start: 0px
+.about__link
+  margin: 0 10px
 
-.nav
+.nav, .about__link
   list-style: none
   display: inline-block
+
+.nav
+  // list-style: none
+  // display: inline-block
   margin-right: 20px
   margin-left: 20px
+
+  @include horizontal-underline-element
+
+.nav:after
+  @include horizontal-underline-after($pink, 3px)
+
+.nav:hover:after
+  @include horizontal-underline-after-hover
 
 .underline-pink:after
   background-color: $pink
@@ -68,7 +73,6 @@ p
   text-align: center
 
 .section-title
-  @include rainbow
   border-width: 0 0 3px 0
 
   display: inline-block
@@ -86,15 +90,15 @@ a
 .a__pink
   color: $pink
 
-  @include horizontal-underline
+  @include horizontal-underline-element
 
 .a__pink:after
-  @include horizontal-underline-hover($pink, 1px)
+  @include horizontal-underline-after($pink, 1px)
 
 .a__pink:hover:after
-  @include horizontal-underline-after
+  @include horizontal-underline-after-hover
 
-// h1
+// h1, h2
 .title
   font: $font__header
   margin: 0 auto
@@ -110,6 +114,9 @@ a
 
 .header
   display: inline-block
+
+.project__title, .project__desc
+  display: inline
 
 // img
 .heading-img
@@ -143,3 +150,6 @@ $breakpoint-small-desktop: 992px
 
   .heading-img
     padding: 0
+
+  .about__description
+    padding: 0 10px
