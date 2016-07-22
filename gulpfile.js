@@ -23,7 +23,7 @@ gulp.task('serve', function () {
 
     gulp.src('./app')
         .pipe(server({
-            livereload: true,
+            livereload: false,
             open: true,
             defaultFile: 'index.html',
             directoryListing: false
